@@ -17,11 +17,5 @@
         "psr-4": {
             "Magelicious\\RoyalTrek\\": ""
         }
-    },
-    "repositories": {
-        "royaltrek": {
-            "type": "git",
-            "url": "https://github.com/fabio-hibrido/royaltrek.git"
-        }
     }
 }
