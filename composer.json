@@ -1,5 +1,5 @@
 {
-    "name": "magelicous/module-royal-trek",
+    "name": "fabio-hibrido/royaltrek",
     "description": "My module description",
     "require": {
         "php": "7.2.*"
