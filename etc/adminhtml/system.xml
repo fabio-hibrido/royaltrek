@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="carriers">
+            <group id="royaltrek" type="text" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10">
+                <label>Royal Trek Shipping</label>
+                <field id="active" type="select" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" type="text" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20">
+                    <label>Title</label>
+                </field>
+                <field id="sallowspecific" type="select" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30">
+                    <label>Ship to Applicable Countries</label>
+                    <frontend_class>shipping-applicable-class</frontend_class>
+                    <source_model>Magento\Shipping\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" type="multiselect" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40">
+                    <label>Ship to Specific Countries</label>
+                    <can_be_empty>1</can_be_empty>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                </field>
+                <field id="showmethod" type="select" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="50">
+                    <label>Show if Not Applicable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="specificerrmsg" type="textarea" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="60">
+                    <label>Displayed Error Message</label>
+                </field>
+                <field id="sort_order" type="text" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="70">
+                    <label>Sort Order</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+
+                <group id="royaltrekstandard" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="80">
+                    <label><![CDATA[The "RoyalTrek Standart" shipping method]]></label>
+                    <fieldset_css>complex</fieldset_css>
+                    <field id="title" type="text" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10">
+                        <label><![CDATA[Title]]></label>
+                    </field>
+                    <field id="shippingcost" type="text" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20">
+                        <label><![CDATA[Shipping Cost]]></label>
+                        <validate>validate-number validate-zero-or-greater</validate>
+                    </field>
+                </group>
+
+                <group id="royaltrek48hr" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="90">
+                    <label><![CDATA[The "RoyalTrek 48h" shipping method]]></label>
+                    <fieldset_css>complex</fieldset_css>
+                    <field id="title" type="text" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10">
+                        <label><![CDATA[Title]]></label>
+                    </field>
+                    <field id="shippingcost" type="text" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20">
+                        <label><![CDATA[Shipping Cost]]></label>
+                        <validate>validate-number validate-zero-or-greater</validate>
+                    </field>
+                </group>
+
+            </group>
+        </section>
+    </system>
+</config>
